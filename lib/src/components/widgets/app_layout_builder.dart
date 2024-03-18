@@ -51,34 +51,34 @@ class _AppLayoutBuilderState extends State<AppLayoutBuilder> {
   }
 }
 
-class AppLayoutBuilderWeb extends StatefulWidget {
-  const AppLayoutBuilderWeb(
-    this.builder, {
-    super.key,
-  });
-
-  final AppBuilder builder;
-
-  @override
-  State<AppLayoutBuilderWeb> createState() => _AppLayoutBuilderWebState();
-}
-
-class _AppLayoutBuilderWebState extends State<AppLayoutBuilderWeb> {
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        late DeviceType type;
-
-        if (constraints.maxWidth <= 480) {
-          type = DeviceType.mobile;
-        } else if (constraints.maxWidth > 480 && constraints.maxWidth <= 830) {
-          type = DeviceType.tab;
-        } else if (constraints.maxWidth > 830) {
-          type = DeviceType.web;
-        }
-        return widget.builder(context, type, constraints.maxWidth);
-      },
-    );
-  }
-}
+// class AppLayoutBuilderWeb extends StatefulWidget {
+//   const AppLayoutBuilderWeb(
+//     this.builder, {
+//     super.key,
+//   });
+//
+//   final AppBuilder builder;
+//
+//   @override
+//   State<AppLayoutBuilderWeb> createState() => _AppLayoutBuilderWebState();
+// }
+//
+// class _AppLayoutBuilderWebState extends State<AppLayoutBuilderWeb> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return LayoutBuilder(
+//       builder: (context, constraints) {
+//         late DeviceType type;
+//
+//         if (constraints.maxWidth <= 480) {
+//           type = DeviceType.mobile;
+//         } else if (constraints.maxWidth > 480 && constraints.maxWidth <= 830) {
+//           type = DeviceType.tab;
+//         } else if (constraints.maxWidth > 830) {
+//           type = DeviceType.web;
+//         }
+//         return widget.builder(context, type, constraints.maxWidth);
+//       },
+//     );
+//   }
+// }

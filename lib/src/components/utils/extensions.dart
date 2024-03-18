@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
-extension Height on SizedBox {
-  SizedBox get height => SizedBox(height: this.height);
+extension SizedBoxHelper on num {
+  Widget get height {
+    return SizedBox(height: toDouble());
+  }
+
+  Widget get width {
+    return SizedBox(width: toDouble());
+  }
 }
